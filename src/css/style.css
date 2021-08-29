@@ -192,7 +192,7 @@ body{
 }
 @media only screen and (max-width: 995px){
     .container{
-        width: 90%;
+        width: 100%;
     }
     .container .todo-list{
         flex-direction: column;
@@ -201,8 +201,20 @@ body{
     .container .todo-list .todo-input .form-control{
         width: 100%;
     }
+    .container .todo-list .todo-input .input-text{
+        height: 50px;
+    }
+    .container .todo-list .todo-input .form-control{
+        height: 200px;
+    }
+    .container .todo-list .todo-input{
+        width: 100%;
+    }
     .container .todo-list .todo-ouput .title-task{
         text-align: center;
+    } 
+    .container .todo-list .todo-input .button-text-area  .button{
+        height: 35px;
     }
     .container .todo-list .todo-input .button-text-area{
         justify-content: center;
