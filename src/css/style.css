@@ -1,0 +1,221 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #fcfafa
+}
+/* Title*/
+.container .title-main{
+    font: 600 1.2rem 'Nunito', sans-serif;
+    color: #000;
+    text-transform: uppercase;
+}
+/* Container app*/
+.container .todo-list{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+/* Lado input */
+.container .todo-list .todo-input,
+.container .todo-list .todo-ouput{
+    padding: 10px;
+    display: flex;
+    width: 100%;
+}
+.container .todo-list .todo-input{
+    justify-content:center;
+    align-items:flex-start;
+}
+.container .todo-list .todo-input .input-text,
+.container .todo-list .todo-input .form-control{
+    width: 100%;
+    border: 1px solid #1d9bf0;
+    border-radius: 5px;
+    font: 400 1rem 'Nunito', sans-serif
+}
+.container .todo-list .todo-input .input-text{
+    height: 40px
+}
+.container .todo-list .todo-input .text-area{
+    padding:0;
+    margin: 0;
+}
+.container .todo-list .todo-input .input-text:focus-visible,
+.container .todo-list .todo-input .form-control:focus,
+.container .todo-list .todo-input .button-text-area .button:focus{
+    outline: none;
+    box-shadow: none;
+}
+.container .todo-list .todo-input .button-text-area{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    padding:10px;
+}
+.container .todo-list .todo-input .button-text-area .button{
+    background-color: #1d9bf0;
+    color: #fff;
+    outline: none;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    text-align: center;
+    width: 100%;
+    height: 25px;
+    font: 400 .8rem 'Nunito', sans-serif;
+    cursor: pointer;
+}
+.container .todo-list .todo-input .button-text-area .button:hover{
+    background-color: #27b1dc;
+}
+/* Placeholder Input*/
+.container .todo-list .todo-input .input-text::placeholder,
+.container .todo-list .todo-input .form-control::placeholder{
+    color: #bcbcbc;
+    font: 400 .8rem "Nunito", sans-serif;
+    padding: 5px;
+}
+/*Spinner*/
+.spinner{
+    height: 55px;
+    display: flex;
+    justify-content:center;
+}
+.spinner-border{
+    color: #1d9bf0;
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+}
+/* Mensaje de error*/
+.errMsg{
+    font: 900 .7rem 'Nunito', sans-serif;
+    text-transform: uppercase;
+    color: #f21616;
+}
+.textErrForm{
+    font: 900 1rem 'Nunito', sans-serif;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #f21616;
+    border-radius: 10px;
+    height: 70px;
+    display: flex;
+    text-align: center;
+    justify-content:center;
+    align-items: center;
+    width: 90%;
+}
+/* Lado ouput */
+.container .todo-list .todo-ouput{
+    flex-direction: column;
+}
+.container .todo-list .todo-ouput .no-task{
+    display: flex;
+    opacity: 0;
+    visibility: hidden;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    padding: 15px;
+}
+.container .todo-list .todo-ouput .no-task-title{
+    text-align: center;
+    font: 400 1.2rem 'Nunito', sans-serif;
+    color: #000;
+}
+.container .todo-list .todo-ouput .no-task .icon-task{
+    width: 250px;
+}
+.container .todo-list .todo-ouput .card{
+    margin-bottom: 15px;
+    border: none;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    -webkit-box-shadow: 2px 1px 7px 0 #8c8c8c;
+    box-shadow: 2px 1px 7px 0 #8c8c8c;
+    animation: traslate 1.5s cubic-bezier(.39,.575,.565,1.000) both;
+}
+@keyframes traslate{
+    from{
+        transform: scale(.10)
+    }
+    to{
+        transform: scale(1)
+    }
+}
+.container .todo-list .todo-ouput .card .time-task{
+    text-align: right;
+    font: 600 .7rem 'Nunito', sans-serif;
+    color: #686868;
+    padding: 0 10px;
+}
+.container .todo-list .todo-ouput .title-task{
+    font: 600 1.2rem 'Nunito', sans-serif;
+    height: 25px;
+    text-align: left;
+    color: #1d9bf0;
+}
+.container .todo-list .todo-ouput .card .close-icon{
+    font: 600 .9rem 'Nunito', sans-serif;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+    color: #1d9bf0;
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
+.container .todo-list .todo-ouput .card .card-body .card-title{
+    font: bold 1.2rem 'Nunito', sans-serif
+}
+.container .todo-list .todo-ouput .card .card-body .card-text{
+    font: 400 1rem 'Nunito', sans-serif
+}
+.iconUp{
+    width: 35px;
+    position: fixed;
+    right: 5px;
+    bottom: 1vh;
+    cursor: pointer;
+    display: none;
+    transition: all .5s ease-in-out;
+}
+@media only screen and (max-width: 995px){
+    .container{
+        width: 90%;
+    }
+    .container .todo-list{
+        flex-direction: column;
+    }
+    .container .todo-list .todo-input .input-text,
+    .container .todo-list .todo-input .form-control{
+        width: 100%;
+    }
+    .container .todo-list .todo-ouput .title-task{
+        text-align: center;
+    }
+    .container .todo-list .todo-input .button-text-area{
+        justify-content: center;
+        align-items: center;
+    }
+    .textErrForm{
+        height: 40px;
+        font: 900 .8rem 'Nunito', sans-serif;
+    }
+    .visibility{
+        opacity: 1;
+        visibility: visible;
+        animation: traslate .5s cubic-bezier(.39,.575,.565,1.000) both;
+        display: flex;
+    }
+}
