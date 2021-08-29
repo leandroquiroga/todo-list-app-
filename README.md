@@ -1,6 +1,8 @@
 # TODO LIST 📝
 La idea de este todo list es que el usuario pueda colocar un título y una descripción a su tarea, el titulo puede llevar un titulo a la tarea, la hora de realizar dicha tarea, entre tantas. Permite guardar las tareas usando el localStorage de nuestro navegador, así que se puede salir de la aplicación y volver a entrar y nuestra tarea seguirá estando disponible.
 
+[todo-list-app](https://user-images.githubusercontent.com/80013958/131264782-9610ff8b-90b3-415f-ab4a-3caad4703022.gif)
+
 # Construido con 🛠️
 Este proyecto se realizo con las siguientes herramientas:
 
@@ -43,7 +45,7 @@ Cada tarea se guarda en un objeto con un ID, este ID se crea a partir de número
 
 
 # Despliegue 📦
-
+[![Netlify Status](https://api.netlify.com/api/v1/badges/9410b6aa-2074-43dd-90fc-8626110ce227/deploy-status)](https://todolistask.netlify.app/)
 
 # Contacto 📫
 - [Linkedin](https://www.linkedin.com/in/leanquiroga95/)
